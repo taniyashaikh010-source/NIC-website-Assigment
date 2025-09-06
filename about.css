@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+
+
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0D6CAC;
+}
+
+main {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #0D6CAC;
+  padding: 19px;
+}
+
+.navbar img {
+  margin-right: 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.menu a:hover {
+  color: yellow;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 7px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: yellow;
+  color: #0D6CAC;
+}
+
+/* Hero */
+.hero-section {
+  background-color: #0D6CAC;
+  background-image: url("./assets/calligraphy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section h1 {
+  font-size: 64px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  line-height: 78.4px;
+}
+
+/* About & Vision */
+.about-section, .vision-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+  background-color: #0D6CAC;
+}
+
+.about-text, .vision-text {
+  max-width: 500px;
+}
+
+.about-text h2, .vision-text h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.about-text p, .vision-text p {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #E8F2F8;
+  text-align: left;
+}
+
+/* Goals */
+.goals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.goals img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 60px;
+  background-color: #E8F2F8;
+  background-image: url('./assets/footer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #000;
+}
+
+.logo-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo-side img {
+  width: 100px;
+  height: auto;
+}
+
+.logo-side p {
+  color: #004F9E;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.menu-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-side a {
+  text-decoration: none;
+  color: #004F9E;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.menu-side a:hover {
+  text-decoration: underline;
+}
+
+.menu-side button {
+  background-color: #004F9E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.menu-side button:hover {
+  background-color: #FFCB00;
+  color: #004F9E;
+}
+
+.follow-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.follow-side h1 {
+  font-size: 34px;
+  font-weight: 400;
+  color: #004F9E;
+  margin-bottom: 10px;
+  font-family: "Akaya Telivigala", system-ui;
+  margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.follow-side p {
+  font-size: 14px;
+  color: #333;
+}

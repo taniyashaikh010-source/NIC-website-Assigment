@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body{ 
+margin: 0%;padding: 0%;background-color:#0D6CAC;  ;
+}
+.navbar{
+    display: flex;justify-content: space-between;color: white;
+    background-color: #0D6CAC;
+    padding: 19px;
+    border-bottom: 0.5px solid white;
+}
+.navbar img{
+     /* height: 50px;   Adjust size */
+      margin-right: 20px;
+}
+
+.menu{
+    display: flex;align-items: center;gap: 30px;padding: 10px;
+    a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color:yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+
+}
+}
+.btn{
+    display: flex;align-items: center;gap: 20px;padding: 10px;
+
+}
+button{
+    padding: 8px 9px 8px 9px;
+    border-radius: 7px;
+    border: white solid; 2px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: yellow;
+    color: #0D6CAC;
+    transition: 0.3s;
+}
+.hero-section {
+  background-color: #0D6CAC; 
+  background-image: url("./assets/calligraphy.png");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+  padding: 100px 20px; 
+  text-align: center; 
+  color: white; 
+  height: 50vh;
+}
+.hero-section-context{
+  display: flex;flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section h1{
+    font-size: 64px;
+    font-weight: 700;
+    size: 56px;
+    font-style: bold;
+    font-family: "Inter", sans-serif;color:white ;
+    margin: 10px 0px 10px 0px;
+    line-height: 78.4px;
+}
+/* ============================= */
+/* GEOGRAPHICAL LOCATION SECTION */
+/* ============================= */
+.geographical-location {
+    display: flex;
+    justify-content: space-between; /* keep text left and image right */
+    align-items: center; /* vertically align */
+    gap: 40px; /* space between text and image */
+    padding: 210px 41px;
+    margin-top: 100px;
+}
+
+.geographical-text {
+    flex: 1; /* take equal width with image */
+    color: white;
+    /* margin-left: 110px; */
+}
+
+.geographical-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.geographical-text p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: #E8F2F8;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.geographical-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* align image right */
+}
+
+.geographical-img img {
+    max-width: 100%;
+    border-radius: 8px; /* optional */
+}
+
+
+/* ============================= */
+/* CURRENT PHASE SECTION */
+/* ============================= */
+.current-phase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 41px;
+    margin-top: 100px;
+}
+
+.current-phase-text {
+    flex: 1;
+    color: white;
+}
+
+.current-phase-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.current-phase-text p {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: #E8F2F8;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.current-phase-text img {
+    max-width: 100%;
+}
+
+.geographical-video {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* align video right */
+}
+
+.geographical-video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: 3px solid white;
+    border-radius: 8px; /* optional */
+}
+/* ============================= */
+/* CIRCLE SECTION */
+/* ============================= */
+.circle {
+    display: flex;justify-content:
+     center;align-items: center;
+     gap:60px;
+}
+.circle-text p{
+    font-size: 20.8px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #E8F2F8;
+    line-height: 27.2px;
+    text-align: justify;
+    font-style: semi-bold;
+}
+/* ============================= */
+/* CURRENT PROGRESS SECTION */
+/* ============================= */
+    
+.current-progress{
+    display: flex;flex-direction:column
+     ;align-items: center;
+     gap:60px;
+     margin-top: 100px;
+     padding: 60px 41px;
+}
+.donate h1{ 
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    color: #fdfafb;
+    line-height: 56px;
+    text-align: justify;
+    font-style:black;
+    vertical-align: middle;
+    margin-top:-57px;
+    margin-left: 155px;
+    align-self: center;
+   
+    
+    
+    }
+
+    .donate p{ 
+       font-size: 23px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #fdfafb;
+    line-height: 27.2px;
+    text-align:center;
+    font-style:medium;
+    vertical-align: middle;
+    margin-top:13px;
+    margin-left: 80px;
+    align-self: center;
+ 
+    }
+    .amount{
+        display: flex;flex-direction: column;
+    }
+
+
+
+.amount button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    width: 800px;
+    cursor: pointer;
+
+    /* Background setup */
+    background: linear-gradient(to right, #FFCB00 50%, aliceblue 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* On hover */
+.amount button:hover {
+    background-position: left bottom;
+    color: black; /* text becomes readable on yellow */
+}
+    .current-progress button.taniya{
+
+        border-radius: 31px ;
+        border-color: #FFCB00;
+        background-color: transparent;
+        color: #FFCB00;
+        padding: 13px;
+        width: 140px;
+    }
+.current-progress button.taniya:hover{
+    background-color:#FFCB00;
+    color: #0D6CAC;
+    transition: 0.3s;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  background-color: #E8F2F8;
+  background-image: url('./assets/footer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  margin-left: -27px;
+  margin-right: -27px;
+  
+}
+
+.logo-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo-side img {
+  width: 100px;
+  height: auto;
+}
+.logo-side p {
+  color: #004F9E;
+  font-weight: 500;
+  font-style: medium;
+  font-size: 16px;
+   font-family: 'Montserrat', sans-serif;
+   margin-top: 100px;
+  
+}
+
+.menu-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-side a {
+  text-decoration: none;
+  color: #004F9E;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.menu-side a:hover {
+  text-decoration: underline;
+}
+
+.menu-side button {
+  background-color: #004F9E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.menu-side button:hover {
+  background-color: #FFCB00;
+  color: #004F9E;
+}
+
+.follow-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.follow-side h1 {
+  font-size: 34px;
+  font-weight: 400;
+  font-style:regular;
+  color: #004F9E;
+  margin-bottom: 10px;
+   font-family: "Akaya Telivigala", system-ui;
+   line-height: 47.6px;
+   margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.follow-side p {
+  font-size: 14px;
+  color: #333;
+}
+
+
+

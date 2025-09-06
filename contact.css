@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+body { 
+  margin: 0;
+  padding: 0;
+  background-color: #0D6CAC;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: #0D6CAC;
+  padding: 19px;
+  border-bottom: 0.5px solid white;
+}
+
+.navbar img {
+  margin-right: 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: yellow;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 7px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+  color: #0D6CAC;
+  transition: 0.3s;
+}
+
+/* hero section */
+.hero-section {
+  background-color: #0D6CAC; 
+  background-image: url("./assets/calligraphy.png");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+  padding: 100px 20px; 
+  text-align: center; 
+  color: white; 
+}
+
+.hero-section-context {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section h1 {
+  font-size: 64px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  color: white;
+  margin: 10px 0;
+  line-height: 78px;
+}
+
+.contact-text p {
+  font-size: 19px;
+  font-weight: 400;
+  color: white;
+  margin: 20px 0 40px;
+  line-height: 28px;
+}
+
+/* contact form */
+.contact-form {
+  border: 2px solid #ffcc00; 
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.05);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background-color: #ffcc00;
+  color: #003366;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e6b800;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 60px;
+  background-color: #E8F2F8;
+  background-image: url('./assets/footer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  flex-wrap: wrap;
+}
+
+.logo-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-side img {
+  width: 100px;
+  height: auto;
+}
+
+.logo-side p {
+  color: #004F9E;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+}
+
+.menu-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-side a {
+  text-decoration: none;
+  color: #004F9E;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.menu-side a:hover {
+  text-decoration: underline;
+}
+
+.menu-side button {
+  background-color: #004F9E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.menu-side button:hover {
+  background-color: #FFCB00;
+  color: #004F9E;
+}
+
+.follow-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.follow-side p{
+color: #004F9E;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+  
+}
+
+.follow-side h1 {
+  font-size: 34px;
+  font-weight: 400;
+  color: #004F9E;
+  margin-bottom: 10px;
+  font-family: "Akaya Telivigala", system-ui;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.follow-side p {
+  font-size: 14px;
+  color: #333;
+}
