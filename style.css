@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -12,437 +20,459 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+
+*{
+
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body{ 
+margin: 0%;padding: 0%;
+}
+.navbar{
+    display: flex;justify-content: space-between;color: white;
+    background-color: #0D6CAC;padding:
+     15px;border-bottom: 0.5px solid white;
+}
+
+
+.menu{
+    display: flex;align-items: center;gap: 30px;padding: 10px;
+    a:link {
   color: white;
-  background-color: #0D6CAC;
-  padding: 15px 20px;
-  border-bottom: 0.5px solid white;
-  flex-wrap: wrap;
-}
-
-.logo img {
-  max-width: 120px;
-  height: auto;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-
-.menu a:visited,
-.menu a:hover,
-.menu a:active {
-  color: yellow;
-  text-decoration: none;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-button {
-  padding: 8px 15px;
-  border-radius: 7px;
-  border: 2px solid white;
   background-color: transparent;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s;
+  text-decoration: none;
 }
-
-button:hover {
-  background-color: yellow;
-  color: #0D6CAC;
+a:visited {
+  color:yellow;
+  background-color: transparent;
+  text-decoration: none;
 }
-
-.navbar .btn .icon img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+a:hover {
+  color:yellow;
+  background-color: transparent;
+  text-decoration: none;
 }
-
-.navbar .btn .icon img:hover {
-  background-color: #FFCB00;
-  border-radius: 5px;
-}
-
-/* Mobile Menu */
-.mobile-menu-btn {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-}
-
-.mobile-menu-btn span {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  transition: 0.3s;
-}
-
-/* ===== HERO SECTION ===== */
-.hero-section {
-  background-color: #0D6CAC;
-  background-image: url("./assets/calligraphy.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 80px 20px;
-  text-align: center;
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-section-context {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  max-width: 1200px;
-}
-
-.hero-section h3 {
-  font-size: 28px;
-  font-weight: 300;
-  font-family: "Almarai", sans-serif;
-}
-
-.hero-section h1 {
-  font-size: 48px;
-  font-weight: 500;
-  font-family: "Inter", sans-serif;
-  color: #FFCB00;
-  margin: 10px 0;
-}
-
-.hero-section h2 {
-  font-size: 24px;
-  font-weight: 500;
-  color: #ECECEC;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.hero-section p {
-  font-size: 16px;
-  font-weight: 600;
-  color: #E8F2F8;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-}
-
-/* ===== PRAYER TIMES & FACEBOOK ===== */
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 50px 20px;
-  background: #e8f2f8;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.prayer-box {
-  border: 2px solid #f7d24a;
-  border-radius: 150px 150px 20px 20px;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  min-height: 370px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background: white;
-}
-
-.prayer-box h3 {
-  margin-bottom: 5px;
-  color: #2c3e50;
-}
-
-.prayer-box img {
-  width: 20px;
-  height: 20px;
-  margin-bottom: 10px;
-}
-
-.prayer-box p {
-  margin: 0;
-  font-size: 14px;
-  color: #666;
-}
-
-.timings {
-  margin-top: 15px;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.timings div {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
-  font-size: 14px;
-}
-
-.fb-section {
-  flex: 1;
-  min-width: 300px;
-}
-
-.fb-section h2 {
-  text-align: center;
-  color: #0D6CAC;
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 28px;
-}
-
-.fb-posts {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.fb-post {
-  background: white;
-  border-radius: 10px;
-  width: 200px;
-  height: 250px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
-
-.fb-post img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* ===== MISSION SECTION ===== */
-.mission {
-  background-color: #0D6CAC;
-  color: white;
-  padding: 50px 20px;
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.mission-context {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
-}
-
-.mission-context h1 {
-  font-size: 28px;
-  font-weight: 900;
-  font-family: 'Montserrat', sans-serif;
-  margin: 10px 0;
-}
-
-.mission-context p {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.7;
-}
-
-.mission-context h1.need {
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1.4;
-}
-
-.mission-context p.yellow {
-  font-weight: 500;
+a:active {
   color: yellow;
-  line-height: 1.6;
-}
+  background-color: transparent;
+  text-decoration: none;
 
-.mission-context button {
-  padding: 12px 25px;
-  border-radius: 40px;
-  border: none;
-  background-color: #FFCB00;
-  color: #1877f2;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  transition: all 0.3s;
 }
-
-.mission-context button:hover {
-  background-color: white;
-  color: #1877f2;
 }
+.btn{
+    display: flex;align-items: center;gap: 20px;padding: 10px;
 
-.mission-img {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
+}
+button{
+    padding: 8px 9px 8px 9px;
+    border-radius: 7px;
+    border: white solid; 2px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: yellow;
+    color: #0D6CAC;
+    transition: 0.3s;}
+
+    .navbar.btn.icon img{
+      display: flex;justify-content: center;
+      gap: 30px; 
+      cursor: pointer;
+    }
+    .navbar.btn.icon img:hover{
+      background-color: #FFCB00;
+
+    }
+
+.hero-section {
+  background-color: #0D6CAC; 
+  background-image: url("./assets/calligraphy.png");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+  padding: 100px 20px; 
+  text-align: center; 
+  color: white; 
+  height: 100vh;
+}
+.hero-section-context{
+  display: flex;flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-}
-
-.mission-img img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* ===== PAGE 4 SECTIONS ===== */
-.page4 {
-  background-color: #E8F2F8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 50px 20px;
-  min-height: auto;
-}
-
-.page4-img img {
-  max-width: 200px;
-  height: auto;
-}
-
-.page4-context {
-  text-align: center;
-  max-width: 800px;
-}
-
-.page4-context h1 {
-  font-size: 28px;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  color: #0D6CAC;
-  margin-bottom: 20px;
-}
-
-.page4-context p.ref {
-  font-size: 16px;
-  font-weight: 400;
-  color: #0D6CAC;
-  margin: 20px 0;
-  line-height: 1.6;
-}
-
-.page4-context p.arabic {
-  font-size: 20px;
-  font-weight: 700;
-  font-family: 'Almarai', sans-serif;
-  color: #0D6CAC;
-  line-height: 1.6;
-  margin: 20px 0;
-}
-
-.page4-context p.translation {
-  font-size: 16px;
-  font-weight: 400;
-  color: #0D6CAC;
-  line-height: 1.6;
-  margin: 20px 0;
-}
-
-/* ===== GALLERY ===== */
-.gallery {
-  background-color: #E8F2F8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 50px 20px;
-  min-height: auto;
-}
-
-.gallery h1 {
-  font-size: 28px;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  color: #0D6CAC;
-}
-
-.photos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
-  width: 100%;
-  max-width: 1200px;
+}
+.hero-section h3{
+    font-size: 34px;
+    font-weight: 300;
+    size: 34px;font-style: light;
+    font-family: "Almarai", sans-serif; ;
+}
+.hero-section h1{
+    font-size: 64px;
+    font-weight: 500;
+    size: 34px;font-style: light;
+    font-family: "Inter", sans-serif;color: #FFCB00 ;
+    margin: 10px 0px 10px 0px;
+}
+.hero-section h2{
+    font-size: 34px;
+    font-weight: 500;
+    size: 34px;font-style: light;
+    color:#ECECEC ;
+    font-family: 'Montserrat', sans-serif;
+}
+.hero-section p{
+    font-size: 16px;
+    font-weight: 600;
+    size: 34px;font-style: light;
+   color:#E8F2F8 ;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.prayerpage{
+  background-color: #E8F2F8;
+  display: flex;
+}
+{
+      font-family: Arial, sans-serif;
+      background: #f4f8fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 50px 100px;
+      background: #e8f2f8;
+    }
+
+    /* Prayer timings */
+    .prayer-box {
+      
+      border: 2px solid #f7d24a;
+      border-radius: 150px 150px 20px 20px;
+      padding: 20px;
+      text-align: center;
+      width: 300px;height: 370px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      gap: 20px;
+    }
+
+    .prayer-box h3 {
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+
+    .prayer-box p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .timings {
+      margin-top: 15px;
+      gap: 10px;display: flex;flex-direction: column;
+    }
+
+    .timings div {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      font-size: 14px;
+    }
+    .container.prayer-box img{
+      width: 20px;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+     /* Facebook Feeds */
+    .fb-section {
+      flex: 1;
+      margin-left: 40px;
+    }
+
+    .fb-section h2 {
+      text-align: center;
+      color:#0D6CAC;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 33.6px;
+    }
+
+    .fb-posts {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .fb-post {
+      background: white;
+      border-radius: 10px;
+      width: 200px;
+      height: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .fb-post img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .fb-logo {
+      text-align: right;
+      padding: 5px 10px;
+      font-size: 18px;
+      color: #1877f2;
+    }
+    .mission{
+      background-color: #0D6CAC;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      display: flex;
+      gap:190px;
+    }
+.mission-context{
+  display: flex;flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-.photos img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s;
+.mission-context h1{
+    font-size: 34px;
+    font-weight: 900;
+    size: 34px;font-style: black;
+     font-family: 'Montserrat', sans-serif;
+    margin: 10px 0px 10px 0px;
+  
+}
+.mission-context p{
+    font-size: 16px;
+    font-weight: 400;
+    size: 34px;font-style:normal;
+     font-family: 'Montserrat', sans-serif;
+     line-height: 27.2px;
+    margin: 10px 0px 10px 0px;
+    vertical-align: middle;
+  
+}
+.mission-context h1.need{
+    font-size: 27.2px;
+    font-weight: 900;
+    size: 34px;font-style:black;
+     font-family: 'Montserrat', sans-serif;
+     line-height: 38.08px;
+    margin: 10px 0px 10px 0px;
+    vertical-align: middle;
+  
+  
+  
+}
+.mission-context p.yellow{
+    
+    font-weight: 50;
+    size: 16px;font-style:Medium;
+     font-family: 'Montserrat', sans-serif;
+     line-height: 38.08px;
+    margin: 10px 0px 10px 0px;
+    vertical-align: middle;
+    color: yellow
+  
+  
+  
 }
 
-.photos img:hover {
-  transform: scale(1.05);
-}
+    .mission-context button{
+        padding: 10px 15px 10px 15px;
+        border-radius: 40px;
+        border: none;
+        background-color:#FFCB00;
+        color: #1877f2;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 14px;
+         font-family: 'Montserrat', sans-serif;
+         font-style: bold;
+         line-height: 18px;
+         width: 147px;
+    }
+    .mission-context button:hover{
 
-/* ===== LOCATION ===== */
+      background-color:white;
+      color: #1877f2;
+    }
+    .page4{
+  background-color: #E8F2F8;
+  display: flex;
+  flex-direction: column;align-items: center;
+  gap: 10px
+  ;height: 100vh;
+    }
+    .page4-context h1{
+        font-size: 33.6px;
+        font-weight: 700;
+        size: 34px;font-style: black;
+         font-family: 'Montserrat', sans-serif;
+         color: #0D6CAC;
+        margin: 10px 0px 10px 0px;
+        vertical-align: middle;
+      font-style: bold;
+      display: flex;flex-direction: column;
+      align-items: center;gap: 50px;
+    }
+.page4-context p.ref{
+        font-size: 16px;
+        font-weight: 400;
+        size: 34px;font-style:regular;
+         font-family: 'Montserrat', sans-serif;
+         color: #0D6CAC;
+        margin: 10px 0px 10px 0px;
+        vertical-align: middle;
+        display: flex;flex-direction: column;
+      align-items: center;gap: 100px;
+      margin-top: 40px;
+      
+    }
+    .page4-context p.arabic{
+        font-size: 24px;
+        font-weight: 700;
+        size: 16px;font-style:bold;
+         font-family: 'Almarai', sans-serif;
+         color: #0D6CAC;
+        margin: 10px 0px 10px 0px;
+        vertical-align: middle;
+      
+        line-height: 27.2px;
+        margin-top: 40px;
+        
+    }
+    .page4-context p.translation{
+        font-size: 16px;
+        font-weight: 400;
+        size: 16px;font-style:bold;
+         font-family: 'Montserrat', sans-serif;
+         color: #0D6CAC;
+        margin: 10px 0px 10px 0px;
+        vertical-align: middle;
+      text-align: center;
+        line-height: 27.2px;
+        margin-top: 30px;
+    }
+/* ########################## */
+.page4{
+  background-color: #E8F2F8;
+  display: flex;
+  flex-direction: column;align-items: center;
+  gap: 10px
+  ;height: 100vh;
+    }
+    .page4-context h1{
+        font-size: 33.6px;
+        font-weight: 700;
+        size: 34px;font-style: black;
+         font-family: 'Montserrat', sans-serif;
+         color: #0D6CAC;
+        margin: 10px 0px 10px 0px;
+        vertical-align: middle;
+      font-style: bold;
+      display: flex;flex-direction: column;
+      align-items: center;gap: 50px;
+    }
+.page4-context p.ref{
+        font-size: 16px;
+        font-weight: 400;
+        size: 34px;font-style:regular;
+         font-family: 'Montserrat', sans-serif;
+         color: #0D6CAC;
+        margin: 10px 0px 10px 0px;
+        vertical-align: middle;
+        display: flex;flex-direction: column;
+      align-items: center;gap: 100px;
+      margin-top: 40px;text-align: center;
+      
+    }
+    .page4-context p.arabic{
+        font-size: 24px;
+        font-weight: 700;
+        size: 16px;font-style:bold;
+         font-family: 'Almarai', sans-serif;
+         color: #0D6CAC;
+        margin: 10px 0px 10px 0px;
+        vertical-align: middle;
+      
+        line-height: 27.2px;
+        margin-top: 40px;
+        
+    }
+    .page4-context p.translation{
+        font-size: 16px;
+        font-weight: 400;
+        size: 16px;font-style:bold;
+         font-family: 'Montserrat', sans-serif;
+         color: #0D6CAC;
+        margin: 10px 0px 10px 0px;
+        vertical-align: middle;
+      text-align: center;
+        line-height: 27.2px;
+        margin-top: 30px;
+    }
+    .gallery{
+      background-color: #E8F2F8;
+      display: flex;flex-direction: column;align-items: center;
+      gap: 20px;
+      padding: 50px 20px;
+      height: 100vh;
+      
+    }
+    .gallery h1{
+        font-size: 33.6px;
+        font-weight: 700;
+        size: 34px;font-style: black;
+         font-family: 'Montserrat', sans-serif;
+         color: #0D6CAC;
+        
+       
+    }
+    .photos{
+      display: flex;gap: 5px;flex-wrap: wrap;
+      justify-content: center;
+    }
+.location h1{
+
+  font-size: 34px;
+        font-weight: 700;
+        size: 34px;font-style:bold;
+         font-family: 'Montserrat', sans-serif;
+         color:white;
+}
 .location {
   background-color: #0D6CAC;
-  width: 100%;
+  width: 100%;              /* Full width background */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 50px 20px;
-}
-
-.location h1 {
-  font-size: 28px;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  text-align: center;
+  margin-top: -11px;
 }
 
 .map {
-  width: 100%;
-  max-width: 1200px;
-  height: 400px;
+  width: 100%;              /* Full responsive */
+  max-width: 1200px;        /* optional: max limit for big screens */
+  height: 450px;
   border: none;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -454,13 +484,12 @@ button:hover {
   border: none;
   border-radius: 15px;
 }
-
-/* ===== FOOTER ===== */
+/* @@@@@@@@@@@@@@@ */
 footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 40px 20px;
+  align-items: center;
+  padding: 40px 60px;
   background-color: #E8F2F8;
   background-image: url('./assets/footer.png');
   background-repeat: no-repeat;
@@ -468,29 +497,33 @@ footer {
   background-position: center;
   color: #000;
   font-family: 'Arial', sans-serif;
-  flex-wrap: wrap;
-  gap: 30px;
+  width: 100%;           
+  margin: 0;              
+  box-sizing: border-box; 
+  margin-top: -34px;
 }
+
 
 .logo-side {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  min-width: 200px;
+  gap: 30px;
 }
 
 .logo-side img {
   width: 100px;
   height: auto;
 }
-
 .logo-side p {
   color: #004F9E;
   font-weight: 500;
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
+  font-style: medium;
+  font-size: 16px;
+   font-family: 'Montserrat', sans-serif;
+   margin-top: 100px;
+  
 }
 
 .menu-side {
@@ -499,14 +532,12 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  min-width: 200px;
 }
 
 .menu-side a {
   text-decoration: none;
   color: #004F9E;
   font-weight: bold;
-  font-size: 14px;
   transition: 0.3s ease;
 }
 
@@ -536,21 +567,23 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  min-width: 200px;
+  gap: 10px;
 }
 
 .follow-side h1 {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 400;
+  font-style:regular;
   color: #004F9E;
-  font-family: "Akaya Telivigala", system-ui;
-  text-align: center;
+  margin-bottom: 10px;
+   font-family: "Akaya Telivigala", system-ui;
+   line-height: 47.6px;
+   margin-top: 20px;
 }
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -568,195 +601,6 @@ footer {
 .follow-side p {
   font-size: 14px;
   color: #333;
-  text-align: center;
 }
 
-/* ===== MEDIA QUERIES ===== */
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero-section h1 {
-    font-size: 36px;
-  }
-  
-  .hero-section h2 {
-    font-size: 20px;
-  }
-  
-  .hero-section h3 {
-    font-size: 24px;
-  }
-  
-  .container {
-    padding: 40px 20px;
-  }
-  
-  .mission {
-    gap: 30px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  /* Navbar */
-  .menu {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 15px;
-  }
-  
-  .menu.active {
-    display: flex;
-  }
-  
-  .mobile-menu-btn {
-    display: flex;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .navbar > div {
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    padding: 60px 20px;
-    min-height: 80vh;
-  }
-  
-  .hero-section h1 {
-    font-size: 28px;
-  }
-  
-  .hero-section h2 {
-    font-size: 18px;
-  }
-  
-  .hero-section h3 {
-    font-size: 20px;
-  }
-  
-  .hero-section p {
-    font-size: 14px;
-  }
-  
-  /* Prayer & Facebook */
-  .container {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 15px;
-  }
-  
-  .fb-section {
-    margin-left: 0;
-    width: 100%;
-  }
-  
-  .fb-posts {
-    justify-content: center;
-  }
-  
-  /* Mission */
-  .mission {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 15px;
-  }
-  
-  .mission-context h1 {
-    font-size: 24px;
-  }
-  
-  .mission-context h1.need {
-    font-size: 20px;
-  }
-  
-  /* Page4 */
-  .page4-context h1 {
-    font-size: 24px;
-  }
-  
-  .page4-context p.arabic {
-    font-size: 18px;
-  }
-  
-  /* Gallery */
-  .photos {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-  
-  .photos img {
-    height: 150px;
-  }
-  
-  /* Footer */
-  footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-  
-  .logo-side, .menu-side, .follow-side {
-    align-items: center;
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-  .navbar {
-    padding: 10px 15px;
-  }
-  
-  .hero-section {
-    padding: 40px 15px;
-  }
-  
-  .hero-section h1 {
-    font-size: 24px;
-  }
-  
-  .hero-section h2 {
-    font-size: 16px;
-  }
-  
-  .hero-section h3 {
-    font-size: 18px;
-  }
-  
-  .prayer-box {
-    max-width: 280px;
-    border-radius: 100px 100px 20px 20px;
-  }
-  
-  .fb-post {
-    width: 100%;
-    max-width: 200px;
-  }
-  
-  .mission-context h1 {
-    font-size: 20px;
-  }
-  
-  .mission-context p {
-    font-size: 14px;
-  }
-  
-  .gallery h1 {
-    font-size: 24px;
-  }
-  
-  .location h1 {
-    font-size: 24px;
-  }
-  
-  .map {
-    height: 300px;
-  }
-}

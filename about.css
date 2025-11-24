@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+
+
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -12,7 +26,6 @@
 
 html, body {
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -26,37 +39,31 @@ main {
   flex: 1;
 }
 
-/* ===== NAVBAR ===== */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   background-color: #0D6CAC;
-  padding: 15px 20px;
-  position: relative;
-  flex-wrap: wrap;
+  padding: 19px;
 }
 
 .navbar img {
-  max-width: 120px;
-  height: auto;
+  margin-right: 20px;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
   padding: 10px;
-  transition: all 0.3s ease;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
   transition: 0.3s ease;
-  font-size: 14px;
-  white-space: nowrap;
 }
 
 .menu a:hover {
@@ -66,12 +73,12 @@ main {
 .btn {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   padding: 10px;
 }
 
 button {
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-radius: 7px;
   border: 2px solid white;
   background-color: transparent;
@@ -79,7 +86,6 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
-  font-size: 14px;
 }
 
 button:hover {
@@ -87,104 +93,64 @@ button:hover {
   color: #0D6CAC;
 }
 
-/* Mobile Menu Button */
-.mobile-menu-btn {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-  padding: 5px;
-}
-
-.mobile-menu-btn span {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  transition: 0.3s;
-}
-
-/* ===== HERO SECTION ===== */
+/* Hero */
 .hero-section {
   background-color: #0D6CAC;
   background-image: url("./assets/calligraphy.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 60px 20px;
+  padding: 100px 20px;
   text-align: center;
   color: white;
-  min-height: 50vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .hero-section h1 {
-  font-size: clamp(32px, 8vw, 64px); /* Responsive font size */
+  font-size: 64px;
   font-weight: 700;
   font-family: "Inter", sans-serif;
-  line-height: 1.2;
-  margin: 0;
+  line-height: 78.4px;
 }
 
-/* ===== ABOUT & VISION SECTIONS ===== */
+/* About & Vision */
 .about-section, .vision-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 50px 20px;
+  gap: 30px;
+  padding: 60px 40px;
   flex-wrap: wrap;
   background-color: #0D6CAC;
 }
 
 .about-text, .vision-text {
   max-width: 500px;
-  flex: 1;
-  min-width: 300px;
 }
 
 .about-text h2, .vision-text h2 {
-  font-size: clamp(24px, 5vw, 34px);
+  font-size: 34px;
   font-weight: 700;
   color: white;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-bottom: 15px;
 }
 
 .about-text p, .vision-text p {
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 16px;
   color: #E8F2F8;
   text-align: left;
 }
 
-.about-image, .vision-image {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-image img, .vision-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Reverse layout for vision section on desktop */
-.vision-section {
-  flex-direction: row-reverse;
-}
-
-/* ===== GOALS SECTION ===== */
+/* Goals */
 .goals {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 40px 0;
-  padding: 0 20px;
   flex-wrap: wrap;
 }
 
@@ -193,22 +159,19 @@ button:hover {
   height: auto;
 }
 
-/* ===== FOOTER ===== */
+/* Footer */
 footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 40px 20px;
+  padding: 40px 60px;
   background-color: #E8F2F8;
   background-image: url('./assets/footer.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: #000;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: auto;
 }
 
 .logo-side {
@@ -216,8 +179,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  min-width: 200px;
+  gap: 30px;
 }
 
 .logo-side img {
@@ -228,9 +190,8 @@ footer {
 .logo-side p {
   color: #004F9E;
   font-weight: 500;
-  font-size: 14px;
-  margin-top: 0;
-  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 .menu-side {
@@ -238,8 +199,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  min-width: 200px;
+  gap: 10px;
 }
 
 .menu-side a {
@@ -247,7 +207,6 @@ footer {
   color: #004F9E;
   font-weight: bold;
   transition: 0.3s ease;
-  font-size: 14px;
 }
 
 .menu-side a:hover {
@@ -264,7 +223,6 @@ footer {
   cursor: pointer;
   margin-top: 10px;
   transition: 0.3s ease;
-  font-size: 14px;
 }
 
 .menu-side button:hover {
@@ -277,22 +235,21 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  min-width: 200px;
+  gap: 10px;
 }
 
 .follow-side h1 {
-  font-size: clamp(24px, 4vw, 34px);
+  font-size: 34px;
   font-weight: 400;
   color: #004F9E;
   margin-bottom: 10px;
   font-family: "Akaya Telivigala", system-ui;
-  text-align: center;
+  margin-top: 20px;
 }
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -310,190 +267,4 @@ footer {
 .follow-side p {
   font-size: 14px;
   color: #333;
-  text-align: center;
-}
-
-/* ===== MEDIA QUERIES ===== */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .menu {
-    gap: 20px;
-  }
-  
-  .hero-section {
-    padding: 50px 20px;
-    min-height: 40vh;
-  }
-  
-  .about-section, .vision-section {
-    gap: 30px;
-    padding: 40px 20px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    flex-wrap: nowrap;
-    padding: 12px 15px;
-  }
-  
-  .menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #0D6CAC;
-    flex-direction: column;
-    gap: 0;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
-  }
-  
-  .menu.active {
-    display: flex;
-  }
-  
-  .menu a {
-    padding: 12px 0;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  
-  .menu a:last-child {
-    border-bottom: none;
-  }
-  
-  .mobile-menu-btn {
-    display: flex;
-  }
-  
-  .btn {
-    display: none;
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    padding: 40px 15px;
-    min-height: 35vh;
-  }
-  
-  .hero-section h1 {
-    line-height: 1.3;
-  }
-  
-  /* About & Vision Sections */
-  .about-section, .vision-section {
-    padding: 30px 15px;
-    gap: 25px;
-    flex-direction: column;
-  }
-  
-  .vision-section {
-    flex-direction: column;
-  }
-  
-  .about-text, .vision-text {
-    min-width: 100%;
-    text-align: center;
-  }
-  
-  .about-text p, .vision-text p {
-    text-align: center;
-    font-size: 15px;
-  }
-  
-  .about-image, .vision-image {
-    min-width: 100%;
-  }
-  
-  /* Footer */
-  footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-    padding: 30px 20px;
-  }
-  
-  .logo-side, .menu-side, .follow-side {
-    width: 100%;
-  }
-  
-  .menu-side {
-    order: -1;
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-  .navbar {
-    padding: 10px 15px;
-  }
-  
-  .navbar img {
-    max-width: 100px;
-  }
-  
-  .hero-section {
-    padding: 30px 15px;
-    min-height: 30vh;
-  }
-  
-  .hero-section h1 {
-    font-size: 28px;
-  }
-  
-  .about-section, .vision-section {
-    padding: 25px 15px;
-  }
-  
-  .about-text h2, .vision-text h2 {
-    font-size: 22px;
-  }
-  
-  .about-text p, .vision-text p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  
-  footer {
-    padding: 25px 15px;
-    gap: 30px;
-  }
-  
-  .follow-side h1 {
-    font-size: 22px;
-  }
-}
-
-/* Large Desktop */
-@media (min-width: 1200px) {
-  .about-section, .vision-section {
-    padding: 70px 40px;
-  }
-  
-  .hero-section {
-    min-height: 60vh;
-  }
-}
-
-/* Very small screens */
-@media (max-width: 360px) {
-  .hero-section h1 {
-    font-size: 24px;
-  }
-  
-  .about-text h2, .vision-text h2 {
-    font-size: 20px;
-  }
-  
-  button {
-    padding: 6px 12px;
-    font-size: 13px;
-  }
 }

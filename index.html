@@ -195,36 +195,6 @@ Sahih Bukhari </p>
   </div>
 </footer>
 
-<script>
-// Mobile menu functionality
-document.addEventListener('DOMContentLoaded', function() {
-  const mobileMenuBtn = document.createElement('div');
-  mobileMenuBtn.className = 'mobile-menu-btn';
-  mobileMenuBtn.innerHTML = `
-    <span></span>
-    <span></span>
-    <span></span>
-  `;
-  
-  const navbar = document.querySelector('.navbar');
-  const menu = document.querySelector('.menu');
-  
-  // Insert mobile menu button
-  navbar.insertBefore(mobileMenuBtn, menu);
-  
-  // Toggle menu
-  mobileMenuBtn.addEventListener('click', function() {
-    menu.classList.toggle('active');
-  });
-  
-  // Close menu when clicking on a link
-  const menuLinks = menu.querySelectorAll('a');
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('active');
-    });
-  });
-});
-</script>
+
 </body>
 </html>
