@@ -1,387 +1,658 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Almarai:wght@300;400;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-*{
+* {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-
-
-
-body{ 
-margin: 0%;padding: 0%;background-color:#0D6CAC;  ;
+html, body {
+    height: 100%;
+    overflow-x: hidden;
 }
-.navbar{
-    display: flex;justify-content: space-between;color: white;
+
+body { 
+    margin: 0;
+    padding: 0;
     background-color: #0D6CAC;
-    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #0D6CAC;
+    padding: 15px 20px;
     border-bottom: 0.5px solid white;
-}
-.navbar img{
-     /* height: 50px;   Adjust size */
-      margin-right: 20px;
+    position: relative;
+    flex-wrap: wrap;
 }
 
-.menu{
-    display: flex;align-items: center;gap: 30px;padding: 10px;
-    a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
+.navbar img {
+    max-width: 120px;
+    height: auto;
 }
-a:visited {
-  color:yellow;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color:yellow;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: none;
 
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
-}
-.btn{
-    display: flex;align-items: center;gap: 20px;padding: 10px;
 
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
 }
-button{
-    padding: 8px 9px 8px 9px;
+
+.menu a:visited,
+.menu a:hover,
+.menu a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+button {
+    padding: 8px 16px;
     border-radius: 7px;
-    border: white solid; 2px;
+    border: 2px solid white;
     background-color: transparent;
     color: white;
     font-weight: bold;
     cursor: pointer;
-}
-button:hover{
-    background-color: yellow;
-    color: #0D6CAC;
+    font-size: 14px;
     transition: 0.3s;
 }
 
-.hero-section {
-  background-color: #0D6CAC; 
-  background-image: url("./assets/calligraphy.png");
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  background-position: center; 
-  padding: 100px 20px; 
-  text-align: center; 
-  color: white; 
-  height: 50vh;
-}
-.hero-section-context{
-  display: flex;flex-direction: column;
-  align-items: center;
-  justify-content: center;
+button:hover {
+    background-color: yellow;
+    color: #0D6CAC;
 }
 
-.hero-section h1{
-    font-size: 64px;
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    padding: 5px;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    background-color: #0D6CAC; 
+    background-image: url("./assets/calligraphy.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    padding: 60px 20px; 
+    text-align: center; 
+    color: white;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section-context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-section h1 {
+    font-size: clamp(32px, 8vw, 64px);
     font-weight: 700;
-    size: 56px;
-    font-style: bold;
-    font-family: "Inter", sans-serif;color:white ;
-    margin: 10px 0px 10px 0px;
-    line-height: 78.4px;
+    font-family: "Inter", sans-serif;
+    color: white;
+    margin: 10px 0;
+    line-height: 1.2;
 }
-.team-context{
-    margin-top: 300px;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 500;
-    font-style:SemiBold;
-    color: #E8F2F8;
-     font-family: 'Montserrat', sans-serif;
+
+/* ===== TEAM CONTEXT ===== */
+.team-context {
+    margin-top: 60px;
+    text-align: center;
+    padding: 0 20px;
 }
-.team-context h2{
+
+.team-context h2 {
     color: #FFCB00;
     font-weight: 700;
-    font-size: 34px;
-    line-height: 47.6px;
-    font-style: bold;
+    font-size: clamp(28px, 4vw, 34px);
+    line-height: 1.4;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+}
+
+/* ===== AUTHORS SECTIONS ===== */
+.waqf-author {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.waqf-author .author1,
+.waqf-author .author2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-top: 100px;
-
-
-    /* AUTHORS############# */
+    min-width: 250px;
 }
-.waqf-author{
-    display: flex;justify-content:center;gap: 62px;
-}
-.waqf-author p{
-    color:white;
+
+.waqf-author p {
+    color: white;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 27.2px;
-
+    font-size: clamp(18px, 2.5vw, 24px);
+    line-height: 1.4;
     font-family: 'Montserrat', sans-serif;
-    
-    
-}
-.waqf-author p.pre{
-    
-      color:#FFCB00;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 27.2px;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: -10px;
+    margin: 10px 0;
 }
 
-.waqf-author.author2 p{
-    color:white;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 27.2px;
-
-    font-family: 'Montserrat', sans-serif;
-    
+.waqf-author p.pre {
+    color: #FFCB00;
+    margin-top: 5px;
 }
-    .waqf-member-context p{
-     color:#FFCB00;
+
+/* ===== WAQF MEMBERS ===== */
+.waqf-member-context p {
+    color: #FFCB00;
     font-weight: 700;
-    font-size: 34px;
-    line-height: 47.6px;
+    font-size: clamp(28px, 4vw, 34px);
+    line-height: 1.4;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-style: bold;
-    }
-    .waqf-members{
-        display: flex;justify-content: center;gap: 62px;
-    }
-    .waqf-members p{
-        font-weight: 600;
-        font-size: 20.8px;
-        font-style: bold;
-        line-height: 27.2px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
+    margin: 40px 0 20px 0;
+    padding: 0 20px;
+}
 
-    }
-    .The-board-context{
-        color:#FFCB00;
+.waqf-members {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.waqf-members .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 200px;
+}
+
+.waqf-members p {
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 20.8px);
+    line-height: 1.4;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 10px 0;
+}
+
+/* ===== THE BOARD ===== */
+.The-board-context {
+    color: #FFCB00;
     font-weight: 700;
-    font-size: 34px;
-    line-height: 47.6px;
+    font-size: clamp(28px, 4vw, 34px);
+    line-height: 1.4;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-style: bold;
-
-
-    }
-    .The-board{
-         display: flex;justify-content: center;gap: 62px;
-         
-    }
-    .The-board p.yellow{
-        color: #FFCB00;
-        font-weight: 600;
-        font-size: 20.8px;
-        font-style: bold;
-        line-height: 27.2px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-
-
-
-    }
-     .The-board p{
-         font-weight: 600;
-        font-size: 20.8px;
-        font-style: bold;
-        line-height: 27.2px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-
-
-     }
-      .The-board-male {
-  display: flex;
-  justify-content: center;
-  gap: 62px;
-  flex-direction: row; 
-}
-.The-board-male p.yellow{
-        color: #FFCB00;
-        font-weight: 600;
-        font-size: 20.8px;
-        font-style: bold;
-        line-height: 27.2px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-        margin-top: -8px;
+    margin: 60px 0 20px 0;
+    padding: 0 20px;
 }
 
-     .The-board-male p{
-         font-weight: 600;
-        font-size: 20.8px;
-        font-style: bold
-        line-height: 27.2px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
+.The-board {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
 
+.The-board .board-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 200px;
+}
 
-     }
-     .The-board-male .author1,
+.The-board p.yellow {
+    color: #FFCB00;
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 20.8px);
+    line-height: 1.4;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 0;
+}
+
+.The-board p {
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 20.8px);
+    line-height: 1.4;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 10px 0;
+}
+
+/* ===== THE BOARD MALE ===== */
+.The-board-male {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.The-board-male .author1,
 .The-board-male .author2,
 .The-board-male .author3 {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 200px;
 }
 
+.The-board-male p.yellow {
+    color: #FFCB00;
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 20.8px);
+    line-height: 1.4;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 5px 0;
+}
+
+.The-board-male p {
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 20.8px);
+    line-height: 1.4;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 5px 0;
+}
+
+/* ===== FOOTER ===== */
 footer {
-  width: 100%;
-  padding: 40px 0; 
-  background-color: #E8F2F8;
-  background-image: url('./assets/footer.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: space-around; 
-  align-items: center;
-  flex-direction: row;
-  margin: 0;
-  box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-color: #E8F2F8;
+    background-image: url('./assets/footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: auto;
+    width: 100%;
 }
-
 
 .logo-side {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-width: 200px;
 }
 
 .logo-side img {
-  width: 100px;
-  height: auto;
+    width: 100px;
+    height: auto;
 }
+
 .logo-side p {
-  color: #004F9E;
-  font-weight: 500;
-  font-style: medium;
-  font-size: 16px;
-   font-family: 'Montserrat', sans-serif;
-   margin-top: 100px;
-  
+    color: #004F9E;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 0;
 }
 
 .menu-side {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
 }
 
 .menu-side a {
-  text-decoration: none;
-  color: #004F9E;
-  font-weight: bold;
-  transition: 0.3s ease;
+    text-decoration: none;
+    color: #004F9E;
+    font-weight: bold;
+    transition: 0.3s ease;
+    font-size: 14px;
 }
 
 .menu-side a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .menu-side button {
-  background-color: #004F9E;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-weight: bold;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: 0.3s ease;
+    background-color: #004F9E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    font-size: 14px;
 }
 
 .menu-side button:hover {
-  background-color: #FFCB00;
-  color: #004F9E;
+    background-color: #FFCB00;
+    color: #004F9E;
 }
 
 .follow-side {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    min-width: 200px;
 }
 
 .follow-side h1 {
-  font-size: 34px;
-  font-weight: 400;
-  font-style:regular;
-  color: #004F9E;
-  margin-bottom: 10px;
-   font-family: "Akaya Telivigala", system-ui;
-   line-height: 47.6px;
-   margin-top: 20px;
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 400;
+    color: #004F9E;
+    margin-bottom: 10px;
+    font-family: "Akaya Telivigala", system-ui;
+    text-align: center;
 }
 
 .social-icons {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .social-icons img {
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  transition: 0.3s ease;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .social-icons img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .follow-side p {
-  font-size: 14px;
-  color: #333;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #0D6CAC;
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero-section {
+        padding: 50px 20px;
+        min-height: 35vh;
+    }
+    
+    .menu {
+        gap: 20px;
+    }
+    
+    .team-context {
+        margin-top: 40px;
+    }
+    
+    .waqf-author,
+    .waqf-members,
+    .The-board,
+    .The-board-male {
+        gap: 30px;
+    }
 }
 
-body > *:not(footer) {
-  flex: 1;
+/* Mobile */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-wrap: nowrap;
+        padding: 12px 15px;
+    }
+    
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0D6CAC;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    .menu a {
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        font-size: 16px;
+    }
+    
+    .menu a:last-child {
+        border-bottom: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .btn {
+        display: none;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 40px 15px;
+        min-height: 30vh;
+    }
+    
+    .hero-section h1 {
+        line-height: 1.3;
+    }
+    
+    /* Team Sections */
+    .team-context {
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+    
+    .waqf-author,
+    .waqf-members,
+    .The-board,
+    .The-board-male {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 15px;
+    }
+    
+    .waqf-author .author1,
+    .waqf-author .author2,
+    .waqf-members .member,
+    .The-board .board-member,
+    .The-board-male .author1,
+    .The-board-male .author2,
+    .The-board-male .author3 {
+        min-width: 100%;
+    }
+    
+    .waqf-member-context p,
+    .The-board-context {
+        margin: 40px 0 20px 0;
+        padding: 0 15px;
+    }
+    
+    /* Footer */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 30px 20px;
+    }
+    
+    .logo-side, .menu-side, .follow-side {
+        width: 100%;
+    }
+    
+    .menu-side {
+        order: -1;
+    }
 }
 
-
-footer {
-  margin: 0; 
-  width: 100%;
-    flex-shrink: 0}
-   
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #0D6CAC;
-  
+/* Small Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    
+    .navbar img {
+        max-width: 100px;
+    }
+    
+    .hero-section {
+        padding: 30px 15px;
+        min-height: 25vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 28px;
+    }
+    
+    .team-context {
+        margin-top: 20px;
+    }
+    
+    .team-context h2,
+    .waqf-member-context p,
+    .The-board-context {
+        font-size: 24px;
+        margin: 30px 0 15px 0;
+    }
+    
+    .waqf-author p,
+    .waqf-members p,
+    .The-board p,
+    .The-board-male p {
+        font-size: 18px;
+    }
+    
+    .waqf-author,
+    .waqf-members,
+    .The-board,
+    .The-board-male {
+        gap: 25px;
+        padding: 15px;
+    }
+    
+    footer {
+        padding: 25px 15px;
+        gap: 30px;
+    }
+    
+    .follow-side h1 {
+        font-size: 22px;
+    }
 }
 
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+    
+    .team-context {
+        margin-top: 80px;
+    }
+}
 
+/* Very small screens */
+@media (max-width: 360px) {
+    .hero-section h1 {
+        font-size: 24px;
+    }
+    
+    .team-context h2,
+    .waqf-member-context p,
+    .The-board-context {
+        font-size: 22px;
+    }
+    
+    .waqf-author p,
+    .waqf-members p,
+    .The-board p,
+    .The-board-male p {
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
