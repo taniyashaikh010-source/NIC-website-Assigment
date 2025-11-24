@@ -74,5 +74,48 @@
       <p>Email: contact@thenic.com</p>
     </div>
   </footer>
+
+  <script>
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('.navbar');
+  const menu = document.querySelector('.menu');
+  
+  // Create mobile menu button
+  const mobileMenuBtn = document.createElement('div');
+  mobileMenuBtn.className = 'mobile-menu-btn';
+  mobileMenuBtn.innerHTML = `
+    <span></span>
+    <span></span>
+    <span></span>
+  `;
+  
+  // Insert mobile menu button into navbar
+  navbar.appendChild(mobileMenuBtn);
+  
+  // Toggle menu
+  mobileMenuBtn.addEventListener('click', function() {
+    menu.classList.toggle('active');
+    mobileMenuBtn.classList.toggle('active');
+  });
+  
+  // Close menu when clicking on links
+  const menuLinks = menu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      mobileMenuBtn.classList.remove('active');
+    });
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!navbar.contains(event.target)) {
+      menu.classList.remove('active');
+      mobileMenuBtn.classList.remove('active');
+    }
+  });
+});
+</script>
 </body>
 </html>
